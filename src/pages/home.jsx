@@ -10,7 +10,6 @@ function Home() {
     <MotionLogo />
       <Monitoring />
       <OptionHome/>
-
     </div>
   );
 }

@@ -1,15 +1,18 @@
 import React from "react";
 import telefonoImg from "../../../assets/Telefono-01.png"
+import "./monitoring.css";
 
 const Monitoring = () => {
   return (
-    <div>
-      <h1>Bienvenido</h1>
-      <h2>Monitoring Innovation</h2>
-      <img
-        src={telefonoImg} 
-        alt="Motion Innovation Logo"
-      />
+    <div className="monitoring-container">
+      <span class="Bienvenido">BIENVENIDO A</span>
+      <span class="Monitorig">MONITORING INNOVATION</span>
+      <div className="monitoring-telefono"> 
+        <img 
+          src={telefonoImg} 
+          alt="Motion Innovation Logo"
+        />
+      </div>
     </div>
   );
 }

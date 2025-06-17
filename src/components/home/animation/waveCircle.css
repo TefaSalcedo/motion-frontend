@@ -1,26 +1,27 @@
 .wave-circle {
-  animation: moveLeft 6s linear infinite;
-  background: var(--background-color);
-  border-bottom-left-radius: 100% 50%;
-  border-top-left-radius: 100% 50%;
-  box-shadow: -25px 0 10px var(--grey-1);
   height: 100vh;
   opacity: 0.5;
   position: absolute;
   right: -300px;
   top: 0;
   width: 200px;
+animation: moveLeft 5s linear infinite;
+  background: var(--background-color);
+  border-bottom-left-radius: 100% 50%;
+  border-top-left-radius: 100% 50%;
+  box-shadow: -25px 0 10px var(--grey-1);
+  
 }
 
 @keyframes moveLeft {
   0% {
     right: -200px;
-    transform: scaleX(2); /* inicia pequeño */
+    transform: scaleX(1.6); /* inicia pequeño */
     /* opacity: 0.7; */
   }
   25% {
     right: 25%;
-    transform: scaleX(1.2); /* se agranda un poco */
+    transform: scaleX(0.8); /* se agranda un poco */
     /* opacity: 1; */
   }
   50% {
@@ -30,12 +31,12 @@
   }
   75% {
     right: 75%;
-    transform: scaleX(1.4); /* se vuelve a expandir */
+    transform: scaleX(0.8); /* se vuelve a expandir */
     /* opacity: 1; */
   }
   100% {
     right: 100%;
-    transform: scaleX(0.2); /* vuelve a achicarse al salir */
+    transform: scaleX(0.7); /* vuelve a achicarse al salir */
     /* opacity: 0.7; */
   }
 }

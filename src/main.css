@@ -12,14 +12,12 @@
 }
 
 
-body {
+body, html {
   font-family: 'Montserrat', 'Segoe UI', 'Roboto', 'Arial', sans-serif;
   background-color: var(--background-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin: 0;
   padding: 0;
-    overflow: hidden;
+  height: 100%;
+  width: 100%;
+  /* overflow: hidden; */
 }

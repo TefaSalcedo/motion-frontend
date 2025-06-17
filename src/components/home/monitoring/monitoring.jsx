@@ -5,8 +5,8 @@ import "./monitoring.css";
 const Monitoring = () => {
   return (
     <div className="monitoring-container">
-      <span class="Bienvenido">BIENVENIDO A</span>
-      <span class="Monitorig">MONITORING INNOVATION</span>
+      <span className="Bienvenido">BIENVENIDO A</span>
+      <span className="Monitorig">MONITORING INNOVATION</span>
       <div className="monitoring-telefono"> 
         <img 
           src={telefonoImg} 

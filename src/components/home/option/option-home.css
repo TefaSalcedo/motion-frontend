@@ -1,0 +1,50 @@
+.home-options-container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6.2rem;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 3rem;
+}
+
+a {
+  display: inline-block;
+  color: var(--blue-2);
+  font-size: clamp(16px, 2.5vw, 20px);
+  font-weight: bold;
+  height: 24px;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  text-wrap: nowrap;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+a:hover {
+  font-weight: 800;
+}
+
+a:visited {
+  color: var(--blue-2);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@media (max-width: 950px) {
+  .home-options-container {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  a {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+  }
+}

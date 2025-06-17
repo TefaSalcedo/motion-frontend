@@ -1,8 +1,9 @@
 import React from "react";
 import CrudRow from "./crudRow.jsx";
 
+
 const Tabla=() =>{
- 
+    
 
   return (
     <table className="tabla">

@@ -3,6 +3,7 @@
   height: var(--height--table);
   table-layout: fixed; 
   width: 500px;
+
 }
 
 
@@ -15,19 +16,19 @@
 
 .table-container th {
   border-right: 15px solid var(--background-color);
-  height: 35px;
-  font-size: 22px;
+  height: var(--height--table-th);
+  font-size: var(--font-size-table-th)
 }
 
 .th-marca{
-  width:150px;
+  width: var(--width-marca)
 }
 
 .th-sucursal{
-  width:150px;
+  width: var(--width-marca)
 }
 .th-aspirante{
-  width:250px;
+ width: var(--width-aspirante)
 }
 
 .table-container th:last-child {
@@ -36,6 +37,7 @@
 
 .table-container td {
   border-bottom: 1px solid var(--red-2);
+    font-size: var(--font-size-table);
 } 
 
 .table-container tbody {

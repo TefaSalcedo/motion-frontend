@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import IconCreate from "../../../assets/Icon_crear.svg";
 import { useStore } from "../store.jsx";
-
+import "./FormIcon.css"
 
 const FormIcon=()=>{
     console.log("FormIcon component rendered");
@@ -16,9 +16,6 @@ const FormIcon=()=>{
         // Aquí puedes agregar la lógica para manejar la creación de un nuevo registro
     }
     
- 
-    
-
     return (
         <>
             <button onClick={handleCreate} className="create-button">

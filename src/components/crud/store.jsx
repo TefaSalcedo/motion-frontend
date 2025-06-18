@@ -7,7 +7,7 @@ export const useStore = () => useContext(StoreContext);
 
 export const StoreProvider = ({ children }) => {
   const [selectedId, setSelectedId] = useState(null);
-  const [showActions, setShowActions] = useState(true);
+  const [showActions, setShowActions] = useState(false);
   const [refreshTable, setRefreshTable] = useState(() => () => {});
   const [activate,setActivate]=useState(false)
   

@@ -19,12 +19,7 @@ const OptionHome = () => {
       name: "Link repo back",
       link: "https://github.com/TefaSalcedo/motion-backend",
     },
-    // {
-    //     name: "Motion",
-    //     link: "/motions",
-    // }
   ];
-  console.log(options);
 
   return (
     <div className="home-options-container">

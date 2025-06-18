@@ -1,65 +1,167 @@
-.input-group{
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    gap:1rem;
+.input-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
-.icon-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.icon-container img{
-    width:2rem;
-    height: auto;
+.icon-container img {
+  width: 2rem;
+  height: auto;
 }
-.input-group input{
-    flex: 1 1 auto;
-    min-width: 250px;
-    padding: 0.2rem 0.5rem;
-    margin: 1rem 0 ;
-    border-radius: 1.5rem;
-    border: solid 2px var(--grey-1);
-    font-size: var(--font-size-form);
-    max-width: 100%;
-    box-sizing: border-box;
+.input-group input {
+  flex: 1 1 auto;
+  min-width: 250px;
+  padding: 0.2rem 0.5rem;
+  margin: 1rem 0;
+  border-radius: 1.5rem;
+  border: solid 2px var(--grey-1);
+  font-size: var(--font-size-form);
+  color: var(--grey-1);
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .input-group input::placeholder {
-  color: var(--grey-1); /* O el color que prefieras */
-  opacity: 1;     /* Asegura que el color se aplique completamente */
+  color: rgb(200, 200, 200);
+  opacity: 1;
 }
 
-.option-container-create{
-    display:flex;
-    justify-content: space-between;
-    min-width: 250px;
-    width: auto;
-    gap:2rem;
-    margin:0.5rem 0 0 3rem;
-    box-sizing: border-box;
+.option-container-create {
+  display: flex;
+  justify-content: space-between;
+  min-width: 250px;
+  width: auto;
+  gap: 2rem;
+  margin: 0.5rem 0 0 3rem;
+  box-sizing: border-box;
 }
-.option-container-create button{
-    color: var(--grey-1);
-    background-color: var(--background-color);
-    padding:0.3rem 0.5rem;
-    border-radius:6px;
-    width: 7.3rem;
+.option-container-create button {
+  color: var(--grey-1);
+  background-color: var(--background-color);
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  width: 7.3rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
 }
-.button-cancel{
-    border: 2px solid var(--red-1);
+.button-cancel {
+  border: 2px solid var(--red-1);
 }
-.button-create{
-    border: 2px solid var(--blue-2);
+.button-create {
+  border: 2px solid var(--blue-2);
 }
-.option-container-edit{
-    display:flex;
-    justify-content: flex-end;
-    margin:0.5rem 0;
-    gap:1rem;
+
+.button-cancel:hover {
+  background: var(--red-1);
+  color: #fff;
+  border-color: var(--red-1);
 }
-.confirmButton{
-    border:none;
+.button-cancel:active {
+  background: #a0005e;
+  color: #fff;
+  border-color: #a0005e;
+}
+
+.button-create:hover {
+  background: var(--blue-2);
+  color: #fff;
+  border-color: var(--blue-2);
+}
+.button-create:active {
+  background: #2090a4;
+  color: #fff;
+  border-color: #2090a4;
+}
+
+.option-container-edit {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0.5rem 0;
+  gap: 1rem;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.confirmButton {
+  border: none;
+  background: transparent;
+}
+.option-container-edit img {
+  width: 24px;
+  background: transparent;
+}
+
+.option-container-edit button,
+.option-container-edit img {
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.option-container-edit button:hover,
+.option-container-edit img:hover {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  filter: brightness(1.1);
+}
+
+.option-container-edit button:active,
+.option-container-edit img:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  filter: brightness(0.95);
+}
+
+@media (max-width: 800px) {
+  .input-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .input-group input {
+    min-width: 0;
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .icon-container img {
+    width: 1.5rem;
+  }
+
+  .option-container-create,
+  .option-container-edit {
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 0;
+    width: 100%;
+    gap: 0.5rem;
+    margin: 0.5rem 0 0 0;
+  }
+
+  .option-container-create button,
+  .option-container-edit button {
+    width: 100%;
+    min-width: 0;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  .input-group input {
+    font-size: 0.95rem;
+    padding: 0.2rem 0.3rem;
+  }
+
+  .option-container-create button,
+  .option-container-edit button {
+    font-size: 0.95rem;
+    padding: 0.2rem 0.3rem;
+  }
 }

@@ -1,18 +1,17 @@
 import React from "react";
 import CrudRow from "./crudRow.jsx";
-
+import "./crudTable.css"
 
 const Tabla=() =>{
     
 
   return (
-    <table className="tabla">
+    <table className="table-container">
       <thead>
         <tr>
-          <th>Marca</th>
-          <th>Sucursal</th>
-          <th>Aspirante</th>
-          <th>Acciones</th>
+          <th className="th-marca">Marca</th>
+          <th className="th-sucursal">Sucursal</th>
+          <th className="th-aspirante">Aspirante</th>
         </tr>
       </thead>
       <tbody>

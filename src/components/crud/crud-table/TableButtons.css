@@ -1,0 +1,37 @@
+.acciones-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem; 
+  height: var(--height--table);
+}
+
+.acciones-container button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+.acciones-container img {
+  width: 1.5rem;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* .acciones-container{
+   display:inline;
+}
+
+.acciones-container button{
+    background-color: transparent;
+    border:none;
+}
+.acciones-container img{
+    width: 24px;
+    height: 24px;
+} */

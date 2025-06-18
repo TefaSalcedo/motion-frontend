@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";
-import TableButtons from "./crudButtons.jsx";
+import TableButtons from "./TableButtons.jsx";
 import { getAllMotions } from '../../../api/motionsApi.js';
 import {useStore} from "../store.jsx";
+import "./crudRow.css"
 
 
 const CrudRow = () => {
@@ -30,13 +31,13 @@ const CrudRow = () => {
         <> 
             {motions.map((motion, index) => (
             <tr key={index}>
-                <td>{motion.marca }</td>
-                <td>{motion.sucursal }</td>
-                <td>{motion.aspirante }</td>
-                <td className="acciones">
-                    <TableButtons 
-                        id={motion._id} 
-                    />
+                <td className="td-marca">{motion.marca }</td>
+                <td className="td-sucursal">{motion.sucursal }</td>
+                <td className="td-aspirante" >
+                    <div className="aspirante-container"> 
+                        <span> {motion.aspirante }</span>
+                        <TableButtons id={motion._id}/>
+                    </div>
                 </td>
             </tr>
             ))}

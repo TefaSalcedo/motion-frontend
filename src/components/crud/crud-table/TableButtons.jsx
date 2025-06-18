@@ -5,10 +5,10 @@ import EliminarOption from "../../../assets/Icon_eliminar1.svg";
 import EliminarApagado from "../../../assets/Icon_eliminar.svg";
 import { deleteMotion } from '../../../api/motionsApi.js';
 import { useStore } from "../store.jsx";
-
+import "./TableButtons.css"
 const TableButtons=({id})=>{
 
-    const {selectedId, setSelectedId,  setShowActions, refreshTable } = useStore();
+    const {selectedId, setSelectedId,  setShowActions, refreshTable,setActivate } = useStore();
     
     const [buttonsAction, setButtons] = useState(true);
 
@@ -25,10 +25,9 @@ const TableButtons=({id})=>{
     const handleEdit = () => {
         setSelectedId(id);
         setShowActions(true);
-        // Aquí podrías abrir un modal o redirigir a una página de edición
+        setActivate(true);
         console.log(`Editar registro con ID: ${id}`);
     }
-    // SI selectedId =id  activa el buttonActions y si no lo apago solo si EL selectedId ES DIFERENTE DE NULL
     
     const handleButtonActions = () => {
         if (selectedId === id && selectedId !== null) {
@@ -38,24 +37,20 @@ const TableButtons=({id})=>{
         }else{
             setButtons(true);
         }
-
     }
     useEffect(() => {
         handleButtonActions();
     }, [selectedId, id]);
 
     return (
-        <>
-            <>
-                <button onClick={handleEdit} >
-                    <img src={buttonsAction?EditarOption:EditarApagado} alt="Editar" />
-                </button>
-                <button onClick={handleDelete} >
-                    <img src={buttonsAction?EliminarOption:EliminarApagado} alt="Eliminar" />
-                </button>
-            </>
-           
-        </>
+        <div className="acciones-container">
+            <button onClick={handleEdit} >
+                <img src={buttonsAction?EditarOption:EditarApagado} alt="Editar" />
+            </button>
+            <button onClick={handleDelete} >
+                <img src={buttonsAction?EliminarOption:EliminarApagado} alt="Eliminar" />
+            </button>
+        </div>
     )
 }
 export default TableButtons;

@@ -1,11 +1,22 @@
+.table-scroll-container {
+  max-height: 450px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none; 
+  position: relative;
+}
+
+
+.table-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
 .table-container {
   border-collapse: collapse;
   height: var(--height--table);
   table-layout: fixed; 
-  width: 500px;
 
 }
-
 
 .table-container thead {
   background-color: var(--red-2);

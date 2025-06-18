@@ -1,5 +1,6 @@
 import React from "react"
 import Motion from "../../../assets/Imagologotipo_motion.svg"
+import "./crudMotion.css"
 
 const CrudMotion=()=>{
     return(
@@ -8,3 +9,5 @@ const CrudMotion=()=>{
         </>
     )
 }
+
+export default CrudMotion;

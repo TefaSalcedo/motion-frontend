@@ -3,21 +3,21 @@ import CrudRow from "./crudRow.jsx";
 import "./crudTable.css"
 
 const Tabla=() =>{
-    
-
   return (
-    <table className="table-container">
-      <thead>
-        <tr>
-          <th className="th-marca">Marca</th>
-          <th className="th-sucursal">Sucursal</th>
-          <th className="th-aspirante">Aspirante</th>
-        </tr>
-      </thead>
-      <tbody>
-        <CrudRow/>
-      </tbody>
-    </table>
+    <div className="table-scroll-container"> 
+      <table className="table-container">
+        <thead>
+          <tr>
+            <th className="th-marca">Marca</th>
+            <th className="th-sucursal">Sucursal</th>
+            <th className="th-aspirante">Aspirante</th>
+          </tr>
+        </thead>
+        <tbody>
+          <CrudRow/>
+        </tbody>
+      </table>
+    </div>
   );
 }
 

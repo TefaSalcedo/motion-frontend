@@ -1,8 +1,22 @@
 .crudPage-container{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
     gap: 200px;
+    position: absolute;
+    top:100px;
+    /* background-color: aquamarine; */
+}
+.crudPage-logo{
+    position:absolute;
+    bottom:6rem;
+    /* background-color: bisque; */
+}
+.crudPage{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
 }

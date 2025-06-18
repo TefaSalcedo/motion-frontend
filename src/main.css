@@ -9,7 +9,17 @@
   --background-color: #f9f9f9;; 
   /* #f9f9f9; */
   --text-color: #222;
-  --height--table: 2rem;
+
+  --font-size-form:20px;
+
+  --height--table-th:35px;
+  --font-size-table-th:20px;
+
+  --height--table: 2.1rem;
+  --font-size-table:18px;
+ 
+  --width-marca:150px;
+  --width-aspirante:250px;
 }
 
 

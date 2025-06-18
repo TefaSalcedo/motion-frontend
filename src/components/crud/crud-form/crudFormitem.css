@@ -1,0 +1,65 @@
+.input-group{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1rem;
+}
+.icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-container img{
+    width:2rem;
+    height: auto;
+}
+.input-group input{
+    flex: 1 1 auto;
+    min-width: 250px;
+    padding: 0.2rem 0.5rem;
+    margin: 1rem 0 ;
+    border-radius: 1.5rem;
+    border: solid 2px var(--grey-1);
+    font-size: var(--font-size-form);
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.input-group input::placeholder {
+  color: var(--grey-1); /* O el color que prefieras */
+  opacity: 1;     /* Asegura que el color se aplique completamente */
+}
+
+.option-container-create{
+    display:flex;
+    justify-content: space-between;
+    min-width: 250px;
+    width: auto;
+    gap:2rem;
+    margin:0.5rem 0 0 3rem;
+    box-sizing: border-box;
+}
+.option-container-create button{
+    color: var(--grey-1);
+    background-color: var(--background-color);
+    padding:0.3rem 0.5rem;
+    border-radius:6px;
+    width: 7.3rem;
+}
+.button-cancel{
+    border: 2px solid var(--red-1);
+}
+.button-create{
+    border: 2px solid var(--blue-2);
+}
+.option-container-edit{
+    display:flex;
+    justify-content: flex-end;
+    margin:0.5rem 0;
+    gap:1rem;
+}
+.confirmButton{
+    border:none;
+}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import FormContainer from "./crud-form/crudForm";
 import Tabla from "./crud-table/crudTable";
 import CrudMotion from "./crud-motion/crudmotion";

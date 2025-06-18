@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import carIcon from "../../../assets/Icon_vehiculo.svg";
 import locationIcon from "../../../assets/Icon_puntoubicacion.svg";
 import userIcon from "../../../assets/Icon_persona.svg";

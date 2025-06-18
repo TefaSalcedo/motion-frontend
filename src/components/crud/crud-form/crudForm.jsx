@@ -59,6 +59,8 @@ const FormContainer=() =>{
         }
     },[selectedId])
 
+
+
   return (
     <div className="form-container">
         <FormIcon/>
@@ -68,11 +70,7 @@ const FormContainer=() =>{
             onCreate={handleCreate}
             onUpdate={handleUpdate}
         />
-        {/* <>
-        <Buttons/>
-        <ConfirmIcon/>
-        <CancelIcon/>
-        </> */}
+
     </div>
   );
 }

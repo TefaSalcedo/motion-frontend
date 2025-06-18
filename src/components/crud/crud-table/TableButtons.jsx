@@ -38,7 +38,6 @@ const TableButtons=({id})=>{
         }else{
             setButtons(true);
         }
-
     }
     useEffect(() => {
         handleButtonActions();

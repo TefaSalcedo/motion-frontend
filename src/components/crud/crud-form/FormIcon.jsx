@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import IconCreate from "../../../assets/Icon_crear.svg";
 import { useStore } from "../store.jsx";
 import "./FormIcon.css"

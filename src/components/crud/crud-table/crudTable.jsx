@@ -3,6 +3,7 @@ import CrudRow from "./crudRow.jsx";
 import "./crudTable.css"
 
 const Tabla=() =>{
+  
   return (
     <div className="table-scroll-container"> 
       <table className="table-container">

@@ -4,18 +4,12 @@ import { useStore } from "../store.jsx";
 import "./FormIcon.css"
 
 const FormIcon=()=>{
-    console.log("FormIcon component rendered");
     const {setShowActions,setSelectedId,refreshTable, setActivate} = useStore();
-
     const handleCreate = () => {
-        console.log("Create cosito");
         setShowActions(true);
-        // refreshTable();
         setSelectedId(null);
         setActivate(true);
-        // Aquí puedes agregar la lógica para manejar la creación de un nuevo registro
     }
-    
     return (
         <>
             <button onClick={handleCreate} className="create-button">
@@ -24,5 +18,4 @@ const FormIcon=()=>{
         </>
     );
 }
-
 export default FormIcon;

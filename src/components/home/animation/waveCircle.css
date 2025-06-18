@@ -16,27 +16,22 @@ animation: moveLeft 5s linear infinite;
 @keyframes moveLeft {
   0% {
     right: -200px;
-    transform: scaleX(1.6); /* inicia pequeño */
-    /* opacity: 0.7; */
+    transform: scaleX(1.6);
   }
   25% {
     right: 25%;
-    transform: scaleX(0.8); /* se agranda un poco */
-    /* opacity: 1; */
+    transform: scaleX(0.8); 
   }
   50% {
     right: 50%;
-    transform: scaleX(1); /* se reduce en el centro */
-    /* opacity: 0.9; */
+    transform: scaleX(1); 
   }
   75% {
     right: 75%;
-    transform: scaleX(0.8); /* se vuelve a expandir */
-    /* opacity: 1; */
+    transform: scaleX(0.8); 
   }
   100% {
     right: 100%;
-    transform: scaleX(0.7); /* vuelve a achicarse al salir */
-    /* opacity: 0.7; */
+    transform: scaleX(0.7); 
   }
 }

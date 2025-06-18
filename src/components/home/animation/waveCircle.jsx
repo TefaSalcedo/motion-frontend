@@ -9,7 +9,6 @@ const WaveCircle = () => {
           <feDropShadow dx="-8" dy="0" stdDeviation="6" floodColor="black" floodOpacity="0.2" />
         </filter>
       </defs>
-      {/* Este path solo dibuja la mitad derecha de un círculo */}
       <path
         filter="url(#wave-shadow)"
       />

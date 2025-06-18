@@ -1,75 +1,59 @@
-// Formulario.jsx
-import React, {useEffect, useState}from "react";
-import FormIcon from './FormIcon.jsx';
-import CrudFormItems from './crudFormItem.jsx';
-import { createMotion } from '../../../api/motionsApi.js';
-import { updateMotion } from '../../../api/motionsApi.js';
-import {getIdMotion} from '../../../api/motionsApi.js';
-import {useStore} from "../store.jsx";
-import "./crudForm.css"
+import React, { useEffect, useState } from "react";
+import FormIcon from "./FormIcon.jsx";
+import CrudFormItems from "./crudFormItem.jsx";
+import { createMotion } from "../../../api/motionsApi.js";
+import { updateMotion } from "../../../api/motionsApi.js";
+import { getIdMotion } from "../../../api/motionsApi.js";
+import { useStore } from "../store.jsx";
+import "./crudForm.css";
 
-const FormContainer=() =>{
+const FormContainer = () => {
+  const [dataForm, setFormData] = useState({});
+  const { selectedId, refreshTable } = useStore();
 
-    const [dataForm,setFormData] = useState({});
-    const {selectedId, refreshTable} = useStore();
-    
-    console.log(dataForm);
+  const handleCreate = async (dataSend) => {
+    try {
+      await createMotion(dataSend);
+      refreshTable();
+    } catch (error) {
+    }
+  };
 
-    const handleCreate = async (dataSend) => {
-        try {
-            await createMotion(dataSend);
-            refreshTable(); 
-            console.log("Registro creado exitosamente");
-    
-        } catch (error) {
-            console.log("Error al crear el registro");
-        }
-    };
+  const handleUpdate = async (dataSend) => {
+    try {
+      await updateMotion(selectedId, dataSend);
+      refreshTable();
+    } catch (error) {
+    }
+  };
 
-     const handleUpdate = async (dataSend) => {
-        try {
-            await updateMotion(selectedId, dataSend);
-            refreshTable(); 
-            console.log("Registro creado exitosamente");
-    
-        } catch (error) {
-            console.log("Error al crear el registro");
-        }
-    };
+  const handleGetId = async () => {
+    try {
+      const data = await getIdMotion(selectedId);
+      setFormData(data);
+    } catch (error) {
+    }
+  };
 
-    const handleGetId = async () => {
-            try {
-                const data = await getIdMotion(selectedId);
-                setFormData(data);
-                console.log("Registro obtenido exitosamente");
-                console.log("Datos obtenidos:", data);
-            } catch (error) {
-                console.error("Error al obtener los datos:", error);
-            }
-        }
-
-    useEffect(() => {
-        if (selectedId !== null) {
-            handleGetId();
-        } else {
-            setFormData({});
-        }
-    },[selectedId])
-
-
+  useEffect(() => {
+    if (selectedId !== null) {
+      handleGetId();
+    } else {
+      setFormData({});
+    }
+  }, [selectedId]);
 
   return (
     <div className="form-container">
-        <FormIcon/>
-        <CrudFormItems 
-            dataForm={dataForm} 
-            setFormData={setFormData}
-            onCreate={handleCreate}
-            onUpdate={handleUpdate}
-        />
-
+      <FormIcon />
+      <CrudFormItems
+        dataForm={dataForm}
+        setFormData={setFormData}
+        onCreate={handleCreate}
+        onUpdate={handleUpdate}
+      />
     </div>
   );
-}
+};
 
 export default FormContainer;

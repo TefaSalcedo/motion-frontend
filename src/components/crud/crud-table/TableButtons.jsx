@@ -5,7 +5,7 @@ import EliminarOption from "../../../assets/Icon_eliminar1.svg";
 import EliminarApagado from "../../../assets/Icon_eliminar.svg";
 import { deleteMotion } from '../../../api/motionsApi.js';
 import { useStore } from "../store.jsx";
-
+import "./TableButtons.css"
 const TableButtons=({id})=>{
 
     const {selectedId, setSelectedId,  setShowActions, refreshTable } = useStore();
@@ -45,17 +45,14 @@ const TableButtons=({id})=>{
     }, [selectedId, id]);
 
     return (
-        <>
-            <>
-                <button onClick={handleEdit} >
-                    <img src={buttonsAction?EditarOption:EditarApagado} alt="Editar" />
-                </button>
-                <button onClick={handleDelete} >
-                    <img src={buttonsAction?EliminarOption:EliminarApagado} alt="Eliminar" />
-                </button>
-            </>
-           
-        </>
+        <div className="acciones-container">
+            <button onClick={handleEdit} >
+                <img src={buttonsAction?EditarOption:EditarApagado} alt="Editar" />
+            </button>
+            <button onClick={handleDelete} >
+                <img src={buttonsAction?EliminarOption:EliminarApagado} alt="Eliminar" />
+            </button>
+        </div>
     )
 }
 export default TableButtons;

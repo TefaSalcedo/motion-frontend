@@ -1,0 +1,44 @@
+.table-container {
+  border-collapse: collapse;
+  height: var(--height--table);
+  table-layout: fixed; 
+  width: 500px;
+}
+
+
+.table-container thead {
+  background-color: var(--red-2);
+  color: var(--background-color);
+  border-collapse: separate;
+  border-spacing: 16px;
+}
+
+.table-container th {
+  border-right: 15px solid var(--background-color);
+  height: 35px;
+  font-size: 22px;
+}
+
+.th-marca{
+  width:150px;
+}
+
+.th-sucursal{
+  width:150px;
+}
+.th-aspirante{
+  width:250px;
+}
+
+.table-container th:last-child {
+  border-right: none;
+}
+
+.table-container td {
+  border-bottom: 1px solid var(--red-2);
+} 
+
+.table-container tbody {
+  color: var(--grey-1);
+  font-family: var(--font-family);
+}

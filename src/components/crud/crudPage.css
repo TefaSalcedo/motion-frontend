@@ -1,0 +1,8 @@
+.crudPage-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 200px;
+    height: 100vh;
+}

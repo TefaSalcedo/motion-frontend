@@ -1,0 +1,36 @@
+
+.td-marca {
+  text-align: left;
+  text-wrap:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.td-sucursal {
+  text-align: center;
+  text-wrap:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.td-aspirante {
+  height: var(--height--table);
+  text-align: left;
+  padding: 0 8px;
+}
+
+.aspirante-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem; 
+  width: 100%;
+}
+
+.aspirante-container span{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  flex: 1 1 auto;
+}
+

@@ -7,7 +7,7 @@ import CancelIcon from "./container-buttons/cancelIcon.jsx";
 import carIconActivate from "../../../assets/Icon_vehiculo1.svg";
 import locationIconActivate from "../../../assets/Icon_puntoubicacion1.svg";
 import userIconActivate from "../../../assets/Icon_persona1.svg";
-import "./crudFormItem.css"
+import "./crud.css"
 
 import { useStore } from "../store.jsx";
 

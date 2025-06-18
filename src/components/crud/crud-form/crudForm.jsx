@@ -2,9 +2,6 @@
 import React, {useEffect, useState}from "react";
 import FormIcon from './FormIcon.jsx';
 import CrudFormItems from './crudFormItem.jsx';
-// import Buttons from "./container-buttons/buttons.jsx";
-// import ConfirmIcon from "./container-buttons/confirmIcon.jsx";
-// import CancelIcon from "./container-buttons/cancelIcon.jsx";
 import { createMotion } from '../../../api/motionsApi.js';
 import { updateMotion } from '../../../api/motionsApi.js';
 import {getIdMotion} from '../../../api/motionsApi.js';
